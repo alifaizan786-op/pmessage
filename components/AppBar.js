@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
 import {
     SafeAreaView,
     ScrollView,
@@ -8,21 +10,23 @@ import {
     Text,
     useColorScheme,
     View,
-    Button
+    Button,
 } from 'react-native';
+
+import { Header } from '@rneui/themed';
 
 
 
 const styles = StyleSheet.create({
-    fuck : {
+    searchIco : {
         minHeight : 50,
-        backgroundColor : '#AB2626',
         display:'flex',
         flexDirection:'row',
-        alignItems:'center'
+        alignItems:'center',
+        
     },
     txt : {
-        color:'#ffffff',
+        color:'#919191',
         fontWeight : 'bold',
         flex:10,
         textAlign:'center',
@@ -34,12 +38,18 @@ const styles = StyleSheet.create({
     }
 })
 
+
+
 const AppBar = () =>{
     return(
-        <View style={styles.fuck}>
+        <View style={styles.searchIco}>
+            <Icon name="search" size={30} />
+
             <Text style={styles.txt}>
-                Fuck You Tony
+                P Message
             </Text>
+
+
         </View>
     )
 
